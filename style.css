@@ -1,47 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+@font-face {
+    font-family: Norse;
+    src: url(fonts/Norse-Bold.otf);
+}
 
 :root{
-    --background-color:#ebebeb;
-    --form-letter-color: #181818;
-    font-family: 'Smooch Sans', sans-serif;
+    --input-default-margin: 0 15px;
+    --text-default-color: #0e0c0c;
+    --text-form-color: rgb(36, 36, 36);
 }
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+h2{
+    margin: 0;
+    margin: var(--input-default-margin)
 }
 
 body{
-    background-image: url(img/shot-by-cerqueira-8qH4GSYBiSA-unsplash.jpg);
-    background-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/taoh-nichols-9nPRqCQl0Ns-unsplash.jpg);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
-.container{
-    background-color: var(--background-color);
+.logo-image{
+    background-color: rgba(0, 0, 0, 0.450);
+    height: 150px;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:150px
+}
+
+.logo-image img{
+    height: 120px;
+}
+
+span{
+    font-size: 100px;
+    font-family: Norse;
+    color: white;
+}
+
+.right-container{
+    background-color: #f8f8f8;
+    width: 60vw;
     height: 100vh;
-    width:60vw;
-    margin-left: auto;
-    padding-top: 100px;
-    position: relative
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-form{
-    background-color: white;
-    height: 200px;
-    padding: 20px;
+.content-text{
+    font-size: 20px;
+    padding: 35px;
+    padding-bottom: 0;
 }
-.input-container{
+
+.white-part{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.450);
+}
+
+.content-input{
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    margin-left: 0;
 }
 
-.field-input{
-    width: 40%;
+.input{
+    width: clamp(100px, 300px, 500px);
+    display: flex;
+    flex-direction: column;
+    margin: var(--input-default-margin)
 }
 
-p{
-    font-size: 26px;
-    font-weight: 600;
-    margin: 20px;
+input:valid{
+    border: 2px solid green ;
 }
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button{
+    border: 1px solid rgb(87, 43, 67);
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 8px 30px;
+    margin: 35px;
+    background-color: rgb(95, 46, 89);
+}
+
+.login-text p{
+    font-size: 12px;
+    margin: 0px 35px;
+}
+
